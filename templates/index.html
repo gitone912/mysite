@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Free web designer template - by Devma</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/animate.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/wow.min.js"></script>
+    <script> new WOW().init(); </script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="navbar">
+        <div class="logo">
+          <h3>Logo</h3>
+        </div>
+        <ul class=""  id="navbarid">
+          <li><a href="#">start</a></li>
+          <li><a id="about-me" class="active" href="/aboutus">about me</a></li>
+          <li><a id="work" href="/contact">work</a></li>
+          <li><a id="contact" href="/contactme">contact</a></li>
+          <li><a id="form" href="/userform">form</a></li>
+          <li><a id="form" href="/calculator">calculator</a></li>
+          <li class="icon"><a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </a></li>
+        </ul>
+      </div>
+      <div class="header-content">
+        <h1>My I introduce myself ?</h1>
+        <h3>Fontend Designer | UI/UX Designer</h3>
+      </div>
+      <img src="/static/img/container.png" alt="">
+      <div class="goahead">
+        <a href="#">go ahead</a>
+      </div>
+    </div>
+    {% include "lun.html" %}
+    
+ {% block contactus %}{% endblock contactus %}
+
+
+{% block contactme %}{% endblock contactme %}
+    <!-- contact-us -->
+
+    

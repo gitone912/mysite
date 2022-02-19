@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/static/css/formi.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
+
+<div class="container">
+  <form  method="post"  >
+    {% csrf_token %}
+    <p>Welcome to amma ka calculator</p>
+    <label for="">enter the 1st number</label>
+    <input type="text" name="num1">
+    <select name="selection" id="">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+    </select>
+    <label for="">enter the 2nd number</label>
+    <input type="text" name = "num2">
+    
+   <button type="submit">calculate mf</button>
+   <div>
+       <label for="">output</label>
+       <p>{{c}}</p>
+   </div>
+   
+  </form>
+
+</div>

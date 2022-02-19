@@ -1,0 +1,93 @@
+
+
+body {
+  background: linear-gradient(45deg, #f3dfe3, #3F5EFB);
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+    form {
+  padding: 3em;
+  height: 320px;
+  
+ 
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;}
+  
+  p {
+    font-weight: 500;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 12px;}
+    
+    a:hover {
+      text-shadow: 2px 2px 6px #00000040;
+    }
+    
+    a:active {
+      text-shadow: none;
+    }
+  
+  
+  input {
+   
+    width: 200px;
+    padding: 1em;
+    margin-bottom: 2em;
+    border: black;
+
+    border-radius: 5000px;
+    
+    box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
+    
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+ 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);}
+    
+    input:hover {
+      background: rgba(255,255,255,0.1);
+      box-shadow: 4px 4px 60px 8px rgba(0,0,0,0.2);
+      border: #3F5EFB;
+    }
+    
+     
+     
+      
+    
+    
+    button{
+      margin-top: 10px;
+      width: 150px;
+      font-size: 1rem;
+    }
+      button:hover {
+        cursor: pointer;
+      }
+      
+      button:active {
+        background: rgba(255,255,255,0.2);
+      }
+    
+  
+ 
+
+::placeholder {
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);}
+
+
