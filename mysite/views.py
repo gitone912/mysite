@@ -68,3 +68,36 @@ def calculator(request):
         c="you mf eneter correct value"
     print(c)
     return render(request,'calculator.html',{'c':c})
+
+def oddeven(request):
+    b=''
+    try:
+        if request.method=="POST":
+            if request.POST.get('num1')=="":
+                return render(request,'oddeven.html',{'error':True})
+            n1 = eval(request.POST.get('num1'))
+            if (n1%2)==0:
+                b="even number"
+            else:
+                b="odd number"
+    except:
+        b ="error error error"
+    return render(request,'oddeven.html',{'b':b})
+    
+def marksheet(request):
+    a = ''
+    b = ''
+    c= ''
+    try:
+        if request.method=="POST":
+            n1 = eval(request.POST.get('num1'))
+            n2 = eval(request.POST.get('num2'))
+            n3 = eval(request.POST.get('num3'))
+            n4 = eval(request.POST.get('num4'))
+            n5 = eval(request.POST.get('num5'))
+            a=n1+n2+n3+n4+n5
+            b=(a/500)*100
+            c=b/5
+    except:
+        pass
+    return render(request,'marksheet.html',{'a':a,'b':b,'c':c})

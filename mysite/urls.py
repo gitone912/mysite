@@ -27,4 +27,6 @@ urlpatterns = [
     path('userform',views.userform),
     path('submitform', views.submitform, name='submitform' ),
     path('calculator',views.calculator),
+    path('oddeven',views.oddeven),
+    path('marksheet',views.marksheet),
 ]

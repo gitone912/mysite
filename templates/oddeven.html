@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/static/css/formi.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
+
+<div class="container">
+  <form  method="post"  >
+    {% csrf_token %}
+    {% if error %}
+    
+    <p>input correct value<p>
+      {% endif %}
+    <p>Welcome to amma ka calculator</p>
+    <label for="">enter the number</label>
+    <input type="text" name="num1">
+   <button type="submit">check</button>
+   <div>
+       <label for="">output</label>
+       <p>{{b}}</p>
+   </div>
+   
+  </form>
+
+</div>

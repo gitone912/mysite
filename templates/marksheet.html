@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="/static/css/formi.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<div class="container">
+    <form method="post">
+        {% csrf_token %}
+        <p>Welcome to khaloji marksheet maker</p>
+        <div>
+            <label for="">enter the number 1</label>
+            <input type="number" name="num1">
+        </div>
+        <div>
+            <label for="">enter the number 2</label>
+            <input type="number" name="num2">
+        </div>
+        <div>
+            <label for="">enter the number 3</label>
+            <input type="number" name="num3">
+        </div>
+        <div>
+            <label for="">enter the number 4</label>
+            <input type="number" name="num4">
+        </div>
+        <div>
+            <label for="">enter the number 5</label>
+            <input type="number" name="num5">
+        </div>
+        <button type="submit">check</button>
+        <div>
+            <label for="">total</label>
+            <p>{{a}}</p>
+        </div>
+        <div>
+            <label for="">percentage</label>
+            <p>{{b}}</p>
+        </div>
+        <div>
+            <label for="">division</label>
+            <p>{{c}}</p>
+        </div>
+
+    </form>
+
+</div>
