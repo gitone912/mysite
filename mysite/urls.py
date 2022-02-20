@@ -29,4 +29,5 @@ urlpatterns = [
     path('calculator',views.calculator),
     path('oddeven',views.oddeven),
     path('marksheet',views.marksheet),
+    path('newsdetail/<id>',views.newsdetail),
 ]

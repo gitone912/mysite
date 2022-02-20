@@ -2,6 +2,7 @@ from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 from .forms import Userform
 from service.models import Serve
+from news.models import News
 
 def aboutus(request):
     return HttpResponse("okkkkkkkkkkkkkkkkkkk")
@@ -20,8 +21,13 @@ def homepage(request):
     #                  'phone':8800}
     #     ]}
     servicesdata= Serve.objects.all()[1:3]
+    if request.method=="GET":
+        st=request.GET.get('servicename')
+        if st!=None:
+            servicesdata= Serve.objects.filter(service_title=st)
+    newsdata= News.objects.all()[1]
     
-    return render(request,"index.html",{'servicesdata':servicesdata})
+    return render(request,"index.html",{'servicesdata':servicesdata,'newsdata':newsdata})
     
 def contact(request):
     if request.method=='GET':
@@ -105,3 +111,6 @@ def marksheet(request):
         pass
     return render(request,'marksheet.html',{'a':a,'b':b,'c':c})
 
+def newsdetail(request,id):
+    newsdetails=News.objects.get(id=id)
+    return render(request,'newsdetail.html',{'news':newsdetails})

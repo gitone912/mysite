@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="/static/js/wow.min.js"></script>
     <script> new WOW().init(); </script>
+    <form method="get">
+      <input type="text" name="servicename" value="">
+      <input type="submit" value="Search">
+    </form>
   </head>
   <body>
     <div class="header">
@@ -33,7 +37,12 @@
     {{n.service_title}}
     <b>{{n.service_des}}</b>
   </div>
+  
   {% endfor %}
+  <a href="/newsdetail/{{newsdata.id}}"><b><marquee behavior="" direction="">{{newsdata.news_title | safe}}</marquee></b></a>
+</div>
+<div>
+  
 </div>
           <li class="icon"><a href="#">
             <span></span>
