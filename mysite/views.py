@@ -1,6 +1,7 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 from .forms import Userform
+from service.models import Serve
 
 def aboutus(request):
     return HttpResponse("okkkkkkkkkkkkkkkkkkk")
@@ -18,7 +19,9 @@ def homepage(request):
     #                 {'name':'bsdwala',
     #                  'phone':8800}
     #     ]}
-    return render(request,"index.html")
+    servicesdata= Serve.objects.all()[1:3]
+    
+    return render(request,"index.html",{'servicesdata':servicesdata})
     
 def contact(request):
     if request.method=='GET':
@@ -101,3 +104,4 @@ def marksheet(request):
     except:
         pass
     return render(request,'marksheet.html',{'a':a,'b':b,'c':c})
+

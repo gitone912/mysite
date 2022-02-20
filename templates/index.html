@@ -27,7 +27,14 @@
           <li><a id="form" href="/calculator">calculator</a></li>
           <li><a id="form" href="/oddeven">oddeven</a></li>
           <li><a id="form" href="/marksheet">marksheet</a></li>
-
+<div>
+  {% for n in servicesdata %}
+  <div>{{n.service_icon}}
+    {{n.service_title}}
+    <b>{{n.service_des}}</b>
+  </div>
+  {% endfor %}
+</div>
           <li class="icon"><a href="#">
             <span></span>
             <span></span>
