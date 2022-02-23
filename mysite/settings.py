@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'service',
     'tinymce',
-    'news'
+    'news',
+    'contactus'
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS=[
     BASE_DIR / 'static'
 ]
+MEDIA_ROOT=BASE_DIR /'media'
+MEDIA_URL='/media/'
+
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_PORT=465
+EMAIL_HOST_USER='bodichodi1@gmail.com'
+EMAIL_HOST_PASSWORD='K9'
+EMAIL_USER_TLS=True

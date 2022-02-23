@@ -5,12 +5,13 @@
       itssssssss{{output}}
     </h1>
     
-    <form action="">
+    <form method='post' action="{% url 'saveinquiery' %}">
+      {% csrf_token %}
       <div class="name-info">
-        <input type="text" name="" value="" placeholder="Name">
-        <input type="text" name="" value="" placeholder="Email">
+        <input type="text" name="name" value="" placeholder="Name">
+        <input type="text" name="email" value="" placeholder="Email">
       </div>
-      <textarea name="name" rows="8" cols="80" placeholder="How I can helpe you?"></textarea>
+      <textarea name="des" rows="8" cols="80" placeholder="How I can helpe you?"></textarea>
       <div class="wow zoomIn  data-wow-duration="2s" data-wow-delay="1s"">
         <button type="submit">Send</button>
       </div>

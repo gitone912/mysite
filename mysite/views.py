@@ -3,6 +3,8 @@ from django.shortcuts import render
 from .forms import Userform
 from service.models import Serve
 from news.models import News
+from contactus.models import contactnow
+from django.core.mail import send_mail,EmailMultiAlternatives
 
 def aboutus(request):
     return HttpResponse("okkkkkkkkkkkkkkkkkkk")
@@ -11,6 +13,19 @@ def c(request,course):
     return HttpResponse(course)
 
 def homepage(request):
+    # subject='testing mail'
+    # form_email='bodichodi1@gmail.com'
+    # msg='nothing'
+    # to='bsoni9122505056@gmail.com'
+    # msg=EmailMultiAlternatives(subject,msg,form_email,[to])
+    # msg.send()
+    # send_mail(
+    #     'Tessting mail',
+    #     'here is the message',
+    #     'bodichodi1@gmail.com',
+    #     ['bsoni9122505056@gmail.com'],
+    #     fail_silently=False,
+    # )
     # data={
     #     'title': 'homepage',
     #     'a':'the fuck am doing here',
@@ -114,3 +129,14 @@ def marksheet(request):
 def newsdetail(request,id):
     newsdetails=News.objects.get(id=id)
     return render(request,'newsdetail.html',{'news':newsdetails})
+
+    
+def saveinquiery(request):
+    if request.method=="POST":
+        name=request.POST.get('name')
+        email=request.POST.get('email')
+        des= request.POST.get('des')
+        da=contactnow(name=name,email=email,des=des)
+        da.save()
+    return render(request, 'contactu.html')
+
